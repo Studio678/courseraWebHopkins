@@ -141,8 +141,88 @@ For make not braking spase we should use "&amp;nbsp;".<br/>
 For email when we use qoutes, we should use "&amp;quot;".<br/>
 </p>
 </article>
+<article class="sibay">
+<h2>CSS combining selectors</h2>
+<ul>
+	<li>
+		Combining selectors
+		<ul>
+			<li>
+				Element with class selector(selector.class) withot any space betwen them;
+			</li>
+			<li>
+				Child (direct) selector (selector &gt; selector) and again rules start reding from right to left;
+			</li>
+			<li>
+				<p>Descendent selector (selector selector), for example li inside div, even if it not the directly child of di element.</p>
+				<span>For example</span><br/>
+				<code>div li{<br/>
+					  color:red;<br/>
+					  }<br/>
+				</code>
+				
+				<code>
+				&lt;div&gt;<br/>
+				&lt;ul&gt;<br/>
+				&lt;li&gt;Some text will red&lt;/li&gt;<br/>
+				&lt;/ul&gt;<br/>
+				&lt;/div&gt;<br/>
+				</code>
+			</li>
+		</ul>		
+	</li>
+	<li>
+		Didn't cover
+		<ul>
+			<li>
+				Adjacent sibling selector (selector + selector), it implimenting rules on element first after left with same parent matching with right selector.
+			</li>
+			<li>
+				General sibling selector (selector ~ selector), it implimenting rules on all elements with the same parent after left element matching with right selector.
+			</li>
+		</ul>
+	</li>
+</ul>
+</article>
+<article>
+<h2>Pseudo-Class Selector(interactive classes, for examle :onhover)</h2>
+<ul>
+	<li>
+		Many pseudo-class selectors exist
+	</li>
+	<li>
+		We cover:
+		<ul>
+			<li>
+				:link - when user go to this link
+			</li>
+			<li>
+				:visited - when this link was visited
+			</li>
+			<li>
+				:hover - when user focus mouse on element
+			</li>
+			<li>
+				:active - when user click on element but he steel pushing the button on mouse
+			</li>
+			<li>
+				:nth-child(...) - n-th element of this type on this parent
+			</li>
+		</ul>
+	</li>
+</ul>
+</article>
 
+<!--p>This text will be red</p>
+<p>This text will be green</p>
 
+<p>This text should be green.</p>
+<code>This not.</code>
+<p>This text shoud be green too</p>
+<div>
+<p>This not match the general sublime selector .sibay ~ p</p>
+</div>
+<p>This will green again</p-->
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/studio678.github.io/courseraWebHopkins">HTML, CSS, and Javascript for Web Developers</a> is maintained by <a href="https://github.com/studio678">studio678</a>.</span>
 

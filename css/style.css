@@ -1,3 +1,9 @@
+.sibay ~ p{
+	color:green;
+}
+.sibay + p {
+	color: red;
+}
 .myObject{
 	clear: both;
 	width:50%;

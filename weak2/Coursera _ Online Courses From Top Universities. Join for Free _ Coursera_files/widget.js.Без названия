@@ -1,0 +1,1 @@
+define("nls/ru/widget",["require","exports","module"],function(require,exports,module){"use strict";module.exports={"iFrames are not supported in your browser.":"Ваш браузер не поддерживает окна iFrame."}});
