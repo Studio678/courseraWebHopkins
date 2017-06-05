@@ -1,3 +1,27 @@
+body{
+	font-size: 16px;
+	color: #000000;
+	background-color: #ffffff;
+	font-family: 'Oxygen', sans-serif;
+	padding-top: 70px;
+}
+
+/** HEADER **/
+#header-nav{
+	background-color: #999999;
+	border-radius: 0;
+	border:2px solid #000;
+
+}
+
+.navbar-header a.navbar-brand{
+	color: #000;
+	text-shadow: 1px 1px 1px #fff;
+	font-weight: bold;
+	font-size: 1.8em;  
+}
+
+
 .row{
 	margin-bottom: 15px;
 }
@@ -6,3 +30,5 @@
 	border: 2px solid red;
 	background-color:gray;
 }
+
+
