@@ -22,7 +22,7 @@
     <section class="main-content">
 
 <h2>Start your work at local with this comand in working directory:</h2>
-<code>browser-sync start --server --directory --files "*"</code>
+<code>browser-sync start --server --directory --files "**\*"</code>
 
 <h3>This is a few useful features with link:</h3>
 <ul>
@@ -251,7 +251,227 @@ h3{
 		</li>
 	</ul>
 </article>
-
+<section>
+	<article>
+		<h1 style="text-align: center;">Java Script</h1>
+		<h2>Variables</h2>
+		<code style="background-color: #000; box-shadow: 2px 2px 5px rgba(0,0,0,0.7);">
+			<strong><span style="color:#71d8ed">var</span> <span style="color: #acdd58">message</span> <span style="color: #f23672">=</span> <span style="color: #ebd982">"hi"</span><span style="color: #fff">;</span>  </strong>
+		</code>
+		<ul>
+			<li>
+				Variable defenition should always start with 'var'	
+			</li>
+			<li>
+				No types are declared
+				<ul>
+					<li>
+						JS is dynamicaly typed language
+					</li>
+					<li>
+						Same variable can hold different types during the life of execution
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Functions</h2>
+		<div style="background-color: #000; width: 200px; border-radius: 6px; box-shadow: 4px 4px 20px rgba(0,0,0,0.7);">
+		<code style="background-color: #000;">
+			<strong><span style="color: #71d8ed;"></span> <span style="color: #acdd58;">a</span> <span style="color: #fff;">() {<br/>  &nbsp;&nbsp;...<br/>}</span></strong>
+		</code>				
+		</div>
+		<br/>
+		<h3>Scope chain</h3>
+		<ul>
+			<li>
+				Everything is executing in Execution Context
+			</li>
+			<li>
+				Function invocation creates a new Execution Context
+			</li>
+			<li>
+				Each Execution Context has:
+				<ul>
+					<li>
+						Its own Variable Enviroment
+					</li>
+					<li>
+						Special 'this' object
+					</li>
+					<li>
+						Reference to its Outer Enviroment
+					</li>
+				</ul>
+			</li>
+			<li>
+				Global scope does not have an Outer Enviroment as it's the most outer there is
+			</li>
+		</ul>
+		<h3>Summary</h3>
+		<ul>
+			<li>
+				Difining variables - dynamicaly typed
+			</li>
+			<li>
+				Defining functions - creates its own scope (lexical)
+			</li>
+			<li>
+				JS code runs withing an Execution Context
+			</li>
+			<li>
+				Scope chain is used to retrieve variables from Outer Variable Enviroments
+			</li>
+		</ul>
+		<h2>Javascript Types</h2>
+		<ul>
+			<li>
+				<h3>Javascript defines 7 built-in types</h3>
+				<ul>
+					<li>
+						Objects and 6 primitives
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Object type is a collection of name/value pairs</h3>
+				<br/>
+				Person Object
+				<div style="background-color: #777777;padding:5px; color: #fff;">
+					firstName: "Yaakov",<br/>
+					lastName: "Chaikin",<br/>
+					social: {<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					linkedin: "yaakovchaikin",<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	twitter: "yaakovchaikin",<br/>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+					facebook: "CourseraWebDev"<br/>
+					}
+					<br/>
+					
+					<br/>
+				</div>
+			</li>
+			<li>
+				<h3>Primitive type can contain a single, immutable value</h3>
+				<ul>
+					<li>
+						Single value, i.e. not an object
+					</li>
+					<li>
+						Immutable means once it's set, it can't be changed
+						<ul>
+							<li>
+								Value becomes read only
+							</li>
+							<li>
+								You can create another value based on existing one
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4 style="margin-bottom: 0px;">Primitive Type: Boolean</h4>
+						<ul>						
+							<li>
+								true
+							</li>
+							<li>
+								false
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Underfined</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Underfined signifies that no value has over been set</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Can only have one value: undefined
+							</li>
+							<li>
+								You can set a variable to undefined, but you should <strong>NEVER</strong> do it
+								<ul>
+									<li>
+										Its meaning is that it's never been defined, so defining it to undefined is counter to its core meaning
+									</li>
+								</ul>
+							</li>							
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Null</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Null signifies lack of value</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								As opposed to undefined, which is lack of defenition
+							</li>
+							<li>
+								Can only have one value: null
+							</li>
+							<li>
+								It's ok to explicitly set a varible to null
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Number</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Number is only numeric type in Javascript</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Always represented under the hood as double-precision 64-bit floating point
+							</li>
+							<li>
+								JS does not hae an integer type
+								<ul>
+									<li>
+										Integers are subset of doubles instead of a separate data type
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: String</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">String is sequence of characters used to represent text</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								Use either single ore double quotes, i.e., 'text' or "text"
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Primitive Type: Symbol</h4>
+						<div style="border:1px solid #000; box-shadow: 4px 4px 15px rgba(0,0,0,0.6);width: 600px;">
+							<strong style="color: #ff0000;">Symbol is new to ES6 Not covered in this class</strong><br/>
+						</div>
+						<br/>
+						<ul>
+							<li>
+								ES6 (released 2015) isn't widely supported or used yet
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Undefined means variable memmory has been allocated but no value has ever been explicitly set yet</h3>
+			</li>
+		</ul>
+		<h2>Common Language Constructs</h2>
+		Use lecture 43 folder<br/>
+		<hr/>
+	</article>
+</section>
 <!--p>This text will be red</p>
 <p>This text will be green</p>
 
