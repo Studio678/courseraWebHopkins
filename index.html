@@ -495,6 +495,95 @@ h3{
 			</li>
 
 		</ul>
+		<p>If you used events from objects in html, for exemple in button element, this will return global object window. But if you will use unobstrusive event binding like in example bellow<br/></p>
+		<code>
+			// Unobtrusive event binding<br/>
+    		document.querySelector("button")<br/>
+      		&nbsp;&nbsp;.addEventListener("click", sayHello);
+		</code>
+		<p>In this example object this will return button as an object. And this let us to change objects on this events</p>
+		
+		<code>
+			document.addEventListener("DOMContentLoaded",<br/>
+  				&nbsp;&nbsp;function (event) {<br/>
+  				<hr/>
+  			document.querySelector("body")<br/>
+		      &nbsp;&nbsp;.addEventListener("mousemove",<br/>
+		        &nbsp;&nbsp;&nbsp;function (event) {<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;if (event.shiftKey === true) {<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  console.log("x: " + event.clientX);<br/>
+		            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("y: " + event.clientY);<br/>
+		          &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+		        &nbsp;&nbsp;&nbsp;}<br/>
+		      );<br/>
+		</code>
+		Look at lecture 54<br/>
+		<h1>What is JSON?</h1>
+		JavaScript Object Notation
+		<ul>
+			<li>
+				Lightweight data-interchange format
+			</li>
+			<li>
+			<ul>
+				<li>
+					Simple textual representation of data
+				</li>
+			</ul>
+			</li>
+			<li>
+				Easy for humans to read and write
+			</li>
+			<li>
+				Easy for mashines to parse and generate
+			</li>
+			<li>
+				Completely independent of any language
+			</li>
+		</ul>
+		<h2>JSON Syntax Rules</h2>
+		<ul>
+			<li>
+				Subset of Javascript object literal syntax..but
+				<ul>
+					<li>
+						Property names must be in <strong>double qoutes</strong>
+					</li>
+					<li>
+						String values must be in <strong>double qoutes</strong>
+					</li>
+					<li>
+						That's it!
+					</li>
+				</ul>
+			</li>
+			<li>
+				Syntax for everything else is exactly like for objects literal
+			</li>
+		</ul>
+		<h2>Common Misconception</h2>
+		<ul>
+			<li>
+				JSON is NOT a Javascript Object Literal
+			</li>
+			<li>
+				JSON is just a string
+			</li>
+			<li>
+				The syntax of JSON is based on object literal through
+			</li>
+			<li>
+				Need to convert JSON into JS object
+			</li>
+		</ul>
+		<h3>converts drom json string to object</h3>
+		<code>
+			var obj = JSON.parse(jsonString);
+		</code>
+		<h3>converts from object to json string</h3>
+		<code>
+			var str = JSON.stringify(obj);
+		</code>
 	</article>
 </section>
 <!--p>This text will be red</p>
